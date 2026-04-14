@@ -41,7 +41,7 @@ TABLESPACE pg_default;
 ALTER TABLE IF EXISTS "data_rpt_plaform".customer
     OWNER TO postgres;
 
---SOURCE TABLE
+--SPONSOR TABLE
 CREATE TABLE IF NOT EXISTS "data_rpt_plaform".sponsor
 (
     sponsor_id              integer NOT NULL,
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS "data_rpt_plaform".customer_address
 (
     customer_id                 integer NOT NULL,
     customer_address_eff_date   date    NOT NULL,
-    customer_address_end_date   date,
+    customer_address_end_date   date NOT NULL,
     adrs_i                      integer NOT NULL,
 
     CONSTRAINT customer_address_pkey 
